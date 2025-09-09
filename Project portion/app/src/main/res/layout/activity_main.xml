@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="90dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Big mood card -->
+            <LinearLayout
+                android:id="@+id/moodCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_round"
+                android:padding="20dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="4dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/moodTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="What are you in the mood for?"
+                    android:textColor="@color/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:paddingBottom="12dp"/>
+
+                <Button
+                    android:id="@+id/btnLaugh"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/btn_pill_blue"
+                    android:text="Laugh"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="10dp"/>
+
+                <Button
+                    android:id="@+id/btnLearn"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/btn_pill_green"
+                    android:text="Learn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="10dp"/>
+
+                <Button
+                    android:id="@+id/btnMotivate"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/btn_pill_purple"
+                    android:text="Motivate"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sectionHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laugh Feed"
+                android:textStyle="bold"
+                android:textColor="@color/textPrimary"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"/>
+
+            <include layout="@layout/item_video_placeholder"/>
+            <Space android:layout_width="match_parent" android:layout_height="16dp"/>
+            <include layout="@layout/item_video_placeholder"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom nav -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom"
+        app:menu="@menu/menu_bottom_nav"
+        app:itemTextColor="@color/textPrimary"
+        app:itemIconTint="@color/textPrimary"
+        android:background="@drawable/bg_card_round"
+        android:elevation="8dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        app:labelVisibilityMode="labeled"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
