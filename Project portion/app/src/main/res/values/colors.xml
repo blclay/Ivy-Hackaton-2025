@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- dark background + card -->
+    <color name="bg">#0F172A</color>          <!-- deep navy -->
+    <color name="card">#111827</color>        <!-- slightly lighter card -->
+
+    <!-- text -->
+    <color name="textPrimary">#FFFFFF</color>
+    <color name="textSecondary">#B3B8C6</color>
+
+    <!-- brand colors for buttons -->
+    <color name="brandBlue">#2563EB</color>   <!-- Laugh -->
+    <color name="brandGreen">#16A34A</color>  <!-- Learn -->
+    <color name="brandPurple">#7C3AED</color> <!-- Motivate -->
+</resources>
