@@ -1,0 +1,32 @@
+@host = http://localhost:8080
+@user = u1
+
+### Start
+POST {{host}}/api/session/start
+Content-Type: application/json
+
+{ "userId": "{{user}}", "moodStart": 2 }
+
+### Feedback
+POST {{host}}/api/feedback
+Content-Type: application/json
+
+{ "userId": "{{user}}", "itemId": "laugh_01", "reaction": "smile" }
+
+### Check
+POST {{host}}/api/session/check
+Content-Type: application/json
+
+{ "userId": "{{user}}", "mood": 3 }
+
+### End
+POST {{host}}/api/session/end
+Content-Type: application/json
+
+{ "userId": "{{user}}", "moodEnd": 4 }
+
+### Calendar / Streak / Notifications
+GET {{host}}/api/calendar?userId={{user}}
+GET {{host}}/api/calendar/streak?userId={{user}}
+GET {{host}}/api/notifications/today?userId={{user}}
+GET {{host}}/api/limit/status?userId={{user}}
