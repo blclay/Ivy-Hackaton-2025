@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/streakText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Good-mood streak: 0 days"
+            android:textColor="@color/textPrimary"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:paddingBottom="12dp" />
+
+        <!-- White card for contrast -->
+        <LinearLayout
+            android:id="@+id/calendarCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="12dp">
+
+            <CalendarView
+                android:id="@+id/calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:firstDayOfWeek="1"
+                android:weekNumberColor="@android:color/transparent"
+                android:focusedMonthDateColor="@android:color/black"
+                android:unfocusedMonthDateColor="@android:color/darker_gray"
+                android:weekSeparatorLineColor="@android:color/darker_gray" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/daySummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick a day to see start/end mood"
+            android:textColor="@color/textPrimary"
+            android:textSize="16sp"
+            android:paddingTop="12dp" />
+    </LinearLayout>
+</ScrollView>

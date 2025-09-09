@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daily limit reached"
+        android:textStyle="bold"
+        android:textColor="@color/textPrimary"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:paddingBottom="12dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nice work taking in positive content today. Try a phone-free break and check back tomorrow!"
+        android:textColor="@color/textSecondary"
+        android:textSize="16sp"
+        android:gravity="center"/>
+</LinearLayout>

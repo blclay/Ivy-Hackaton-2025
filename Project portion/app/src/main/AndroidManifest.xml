@@ -23,7 +23,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".FeedActivity" android:exported="false" />
+        <activity android:name=".FeedActivity" android:exported="false"/>
+        <activity android:name=".CalendarActivity" android:exported="false"/>
+        <activity android:name=".LockoutActivity" android:exported="false"/>
 
     </application>
 
